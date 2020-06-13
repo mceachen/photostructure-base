@@ -14,7 +14,7 @@ FROM node:12-alpine
 
 RUN apk update ;\
   apk upgrade ;\
-  apk add --no-cache build-base git lcms2-dev libjpeg-turbo-dev python3-dev procps coreutils util-linux ffmpeg perl sqlite libjpeg-turbo-utils bash ;\
+  apk add --no-cache build-base git lcms2-dev libjpeg-turbo-dev python3-dev procps coreutils util-linux ffmpeg perl sqlite libjpeg-turbo-utils bash ncurses;\
   apk add --no-cache musl-locales --repository http://dl-3.alpinelinux.org/alpine/v3.12/community
 
 RUN wget https://photostructure.com/src/dcraw.c ;\
