@@ -1,2 +1,3 @@
 # photostructure-base
-Docker base image for photostructure for docker
+
+Docker base image for testing PhotoStructure for Docker in CI
