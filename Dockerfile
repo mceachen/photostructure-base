@@ -14,9 +14,10 @@ FROM node:12-alpine
 RUN apk update ;\
   apk upgrade ;\
   apk add build-base git lcms2-dev libjpeg-turbo-dev python3-dev procps coreutils util-linux ffmpeg perl sqlite libjpeg-turbo-utils musl-locales \
-  --update-cache --repository http://dl-3.alpinelinux.org/alpine/v3.12/community
+  --no-cache --repository http://dl-3.alpinelinux.org/alpine/v3.12/community
 
 RUN wget https://photostructure.com/src/dcraw.c ;\
   gcc -o dcraw -O4 dcraw.c -lm -DNODEPS ;\
   mkdir -p /ps/app/tools ;\
-  cp dcraw /ps/app/tools
+  mv dcraw /ps/app/tools ;\
+  rm dcraw.c
