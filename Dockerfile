@@ -10,8 +10,6 @@ FROM node:14-alpine
 # util-linux (which should be there already) for `renice` and `lsblk`
 # musl-locales for `locale`
 
-# Note that PhotoStructure tests need both VLC and FFmpeg to be installed.
-
 # https://pkgs.alpinelinux.org/contents
 
 RUN apk update ;\
@@ -30,8 +28,7 @@ RUN apk update ;\
   procps \
   python3-dev \
   sqlite \
-  util-linux \
-  vlc ;\
+  util-linux; \
   apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/v3.12/community \
   musl-locales
 
