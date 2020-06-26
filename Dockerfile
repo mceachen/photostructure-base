@@ -22,3 +22,5 @@ RUN wget https://photostructure.com/src/dcraw.c ;\
   mkdir -p /ps/app/bin ;\
   mv dcraw /ps/app/bin ;\
   rm dcraw.c
+
+VOLUME [ "/ps/library", "/ps/logs", "/ps/tmp", "/ps/config" ]
